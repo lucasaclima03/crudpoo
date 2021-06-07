@@ -1,10 +1,12 @@
 <?php
+include 'Config.php';
+
 class Contato {
     
     private $pdo;
 
     public function __construct() {
-        $this->pdo = new PDO("mysql:dbname=crudoo;host=localhost","root","");
+        $this->pdo = new PDO("mysql:dbname=".Config::DB_NAME.";host=".Config::HOST, Config::USER, Config::PASS);
        
     }
    
